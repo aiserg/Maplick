@@ -23,3 +23,8 @@ reactive-dict
 accounts-ui
 accounts-password
 practicalmeteor:mocha
+cfs:standard-packages
+cfs:gridfs
+cfs:collection
+cfs:filesystem
+zodiase:mdl
