@@ -9,11 +9,13 @@ Template.download.events({
         FS.Utility.eachFile(event, function(file) {
             Images.insert(file, function (err, fileObj) {
                 console.log("----------------------------------", fileObj.collectionName + "-" + fileObj._id + "-" + fileObj.original.name);
+                let newPoint = new google.maps.LatLng(51.741713, 36.194022);
                 let marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(51.741713, 36.194022),
+                    position: newPoint,
                     map: GLOBAL_MAP,
                     title:"Hello World!"
                 });
+                GLOBAL_MAP.setCenter(newPoint);
             });
         });
     }

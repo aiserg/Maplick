@@ -8,9 +8,9 @@ export let GLOBAL_MAP = null;
 
 
 Template.body.onRendered(function bodyOnCreated() {
-    let myLatlng = new google.maps.LatLng(51.741713, 36.194022);
+    let myLatlng = new google.maps.LatLng(-33.932861, 151.189182);
     let myOptions = {
-        zoom: 8,
+        zoom: 15,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
