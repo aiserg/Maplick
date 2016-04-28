@@ -1,7 +1,15 @@
 body
-    .container
-        header
-            h1 Maplick
-            +download
+    header.mdl-layout__header.navbar
+        div.mdl-layout__header-row
+            nav.mdl-navigation
+                img(src="Maplick-logo-2.png")#logo
+                a(href='#').mdl-navigation__link.file_upload Upload
 
-    #map_canvas
+    ui.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect(for="menu-left")
+        li.mdl-menu__item Upload image
+    aside.container
+        aside.maplick-bar
+            div.maplick-mainform
+                img(src="Maplick-logo-2.png")#logo
+                +download
+        aside#map_canvas

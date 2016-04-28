@@ -1,13 +1,61 @@
+body
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+.navbar
+  display: none
+  color: black
+
+#logo
+  text-align: center
+
 .container
-  float left
-  text-align: center;
-  margin-left: 15%;
-  margin-top: 17%;
+  box-shadow:0 .1em 1em #e5e5e5 inset;
+  height: 100%
+  display: flex
+
+.maplick-bar
+  position: relative
+  flex: 1 75%
+
+.maplick-mainform
+  position: absolute;
+  top: 50%
+  left: 50%
+  height: 30%
+  width: 50%;
+  margin: -15% 0 0 -25%;
+  text-align: center
 
 #map_canvas
-  float right
-  width 750px
-  height 800px
+  display: block
+  flex: 1 100%
+
+
+
+@media (min-width: 379px) and (max-width: 1070px)
+  .navbar
+    box-shadow:0 .2em 2em #e5e5e5 inset;
+    display: block
+    background-color: white
+
+  #logo
+    float: left
+    text-align: center
+    height: 75%
+
+
+  .upload-btn-navbar
+    color: black
+
+  .maplick-bar
+    position: relative
+    flex: 1 0%
+
+  .maplick-mainform
+    display: none
+
 
 .file_upload
   position relative
