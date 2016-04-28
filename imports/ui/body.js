@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import { ReactiveDict } from 'meteor/reactive-dict';
+import { Session } from 'meteor/session';
 
 import './download.js'
 import './body.jade';
@@ -12,13 +12,5 @@ Template.body.onRendered(function bodyOnCreated() {
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    
-    let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-
-    let marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title:"Hello World!"
-    });
+    Session.set("map", new google.maps.Map(document.getElementById("map_canvas"), myOptions));
 });
