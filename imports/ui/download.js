@@ -7,14 +7,15 @@ import { GLOBAL_MAP } from './body.js'
 Template.download.events({
     'change .myFileInput': function(event, template) {
         FS.Utility.eachFile(event, function(file) {
+            let mainform = document.getElementsByClassName('maplick-mainform')
+            let foundedimg = document.getElementsByClassName('founded-img')
+            let imgcontainer = document.getElementsByClassName('img-container')
+            mainform[0].style.top = '15%'
+            foundedimg[0].style.height = '70%'
+
             Images.insert(file, function (err, fileObj) {
                 console.log("----------------------------------", fileObj.collectionName + "-" + fileObj._id + "-" + fileObj.original.name);
                 let x = 0, y = 0;
-                let mainform = document.getElementsByClassName('maplick-mainform')
-                let foundedimg = document.getElementsByClassName('founded-img')
-                mainform[0].style.top = '15%'
-                foundedimg[0].style.height = '70%'
-                
                 switch(fileObj.original.name) {
                     case "rome.jpg":
                         [x, y] = [41.891305, 12.492655];
