@@ -19,9 +19,5 @@ Template.body.onRendered(function bodyOnCreated() {
 
 Template.body.events({
 
-    'click .testup'(e, t){
-        let el = document.getElementsByClassName('maplick-mainform')
-        console.warn(el)
-        el[0].style.top = '15%'
-    }
+    
 })
