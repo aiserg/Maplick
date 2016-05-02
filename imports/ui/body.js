@@ -4,7 +4,7 @@ import { Template } from 'meteor/templating'
 import './download.js'
 import './body.jade'
 
-export let GLOBAL_MAP = null
+export let GLOBAL_MAP = null;
 
 
 Template.body.onRendered(function bodyOnCreated() {
@@ -13,11 +13,11 @@ Template.body.onRendered(function bodyOnCreated() {
         zoom: 15,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
+    };
     GLOBAL_MAP = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
-})
+});
 
 Template.body.events({
 
     
-})
+});
