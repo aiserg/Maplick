@@ -21,17 +21,18 @@ Template.download.events({
 
                     console.log("res", res);
 
-                    let newPoint = new google.maps.LatLng(res.data.latitude, res.data.longitude);
-                    
-                    let marker = new google.maps.Marker({
-                        position: newPoint,
-                        map: GLOBAL_MAP,
-                        title:"Hello World!"
-                    });
+                    if (res.data)  {
+                        let newPoint = new google.maps.LatLng(res.data.latitude, res.data.longitude);
 
-                    GLOBAL_MAP.setCenter(newPoint);
+                        let marker = new google.maps.Marker({
+                            position: newPoint,
+                            map: GLOBAL_MAP,
+                            title:"Hello World!"
+                        });
+
+                        GLOBAL_MAP.setCenter(newPoint);
+                    }
                 });
-
             })
         })
     }

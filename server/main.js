@@ -28,7 +28,7 @@ Meteor.methods({
 
             let fullCompareImagePath = "/Users/prospero/uploads/" + compareImagePath;
 
-            let pathToPattern = "/Users/prospero/" + pattern.pathToPAttern;
+            let pathToPattern = "/Users/prospero/patterns/" + pattern.pathToPAttern;
 
             let query = `node ${pathToNodeProgram} ${fullCompareImagePath} ${pathToPattern}`;
 
