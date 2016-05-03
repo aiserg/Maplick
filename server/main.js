@@ -4,11 +4,11 @@ const pathToNodeProgram = "/Users/prospero/WebstormProjects/node-help-opencv/ope
 const execSync = require('exec-sync');
 
 Images.allow({
-    'insert': function () {
+    'insert'() {
         // add custom authentication code here
         return true;
     },
-    'update': function () {
+    'update'() {
         // add custom authentication code here
         return true;
     }
@@ -28,11 +28,11 @@ Meteor.methods({
 
             let fullCompareImagePath = "/Users/prospero/uploads/" + compareImagePath;
 
-            let pathToPattern = "/Users/prospero/patterns/" + pattern.pathToPAttern;
+            let pathToPattern = "/Users/prospero/patterns/" + pattern.pathToPattern;
 
             let query = `node ${pathToNodeProgram} ${fullCompareImagePath} ${pathToPattern}`;
 
-            var resultNodeProcess = execSync(query);
+            let resultNodeProcess = execSync(query);
 
             resultNodeProcess = parseFloat(resultNodeProcess);
 
@@ -42,8 +42,6 @@ Meteor.methods({
 
             }
         }
-
         return result ;
-
     }
 });
