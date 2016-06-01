@@ -1,4 +1,8 @@
 body
+    +main
+
+
+template(name="main")
     header.mdl-layout__header.navbar
         div.mdl-layout__header-row
             nav.mdl-navigation
@@ -16,3 +20,18 @@ body
                 img(src="Maplick-logo-2.png").img-container
 
         aside#map_canvas
+
+
+template(name="admin")
+    div.container
+        form.admin_form
+            input(placeholder='Name', type='text').admin-el
+            input(placeholder='X', type='number').admin-el
+            input(placeholder='Y', type='number').admin-el
+            input(type='file', size='40').admin-el
+            input(type='submit',value='Send').admin-el
+
+
+
+
+
