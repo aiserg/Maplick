@@ -1,7 +1,7 @@
 ![image](https://github.com/aiserg/Maplick/blob/master/public/Maplick-logo-2.png)
 
 
-## The diploma project on the knee to search for geolocation using photo of location 
+## Search you geolocation using photo of this location 
 
 ![image](https://github.com/aiserg/Maplick/blob/master/public/018.png)
 
